@@ -60,12 +60,16 @@ I created the public interface for your app. In Django, this involves using view
 
 # Questions
 1. Care sunt avantajele utilizării framework-ului Django?
+
    -> Django's built-in features and conventions enable quick and efficient development. Also, it provides robust security features, protecting against common web vulnerabilities.
 2. Care sunt metodele de definire a rutelor în Django?
+
    -> În Django, rutele (URL patterns) pot fi definite folosind mai multe metode, dar cea mai comună abordare este prin intermediul modulului urls.py.
 3. Ce relație între tabelele bazei de date ați folosit și cum ați implementat-o?
+
    -> Entitatile Category și Task definesc două tabele diferite în baza de date. Aceste modele au o relație de tipul "Many-to-One" (sau "One-to-Many"), ceea ce înseamnă că o categorie poate avea mai multe sarcini, dar o sarcină este asociată cu o singură categorie. Această relație este implementată folosind cheia străină în modelul Task pentru a face referire la modelul Category.
 4. Ce sunt migrațiile bazei de date și cum sunt folosite în Django?
+
    -> În Django, migrațiile bazei de date sunt o caracteristică esențială care permite gestionarea modificărilor structurale ale bazei de date în mod eficient și consistent. Migrațiile sunt utilizate pentru a crea, modifica și ține evidența schimbărilor în schema bazei de date într-un mod controlat și reversibil. Acestea asigură că structura bazei de date corespunde cu structura definită în modelele Django.
 
 
