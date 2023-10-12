@@ -37,7 +37,7 @@ We had to create a TODO app which will consist of **Categories** and **Tasks**
 ### Setup process
 To build this app, you’ll start by creating a virtual environment and setting up a Django project. To create a venv, run the following commands in the terminal:
 > $ python -m venv venv 
-$ source venv/bin/activate
+> $ source venv/bin/activate
 
 Your next step is to install the Django library and its dependencies. I created a `requirements.txt` doc for the simplicity. Make sure you are in the right folder. 
 `pip install -r requirements.txt`
