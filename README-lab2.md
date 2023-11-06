@@ -12,7 +12,7 @@
 
 ## Introducere
 
-Acest document servește ca ghid pentru implementarea sistemului de autentificare și autorizare într-un proiect Django. Include pașii pentru configurarea autentificării personalizate a utilizatorului și redirecționării după acțiuni de login și logout.
+Acest document servește ca ghid pentru implementarea sistemului de autentificare și autorizare în proiectul TO-DO creat anterior in Django. Include pașii pentru configurarea autentificării personalizate a utilizatorului și redirecționării după acțiuni de login și logout.
 
 ## Implementarea Autentificării
 
