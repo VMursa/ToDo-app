@@ -1,5 +1,10 @@
 # todo_list/todo_app/views.py
 from django.urls import reverse, reverse_lazy
+from django.contrib.auth.decorators import login_required
+from .form import CustomLoginForm
+from django.contrib.auth.views import LoginView, LogoutView
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
 
 from django.views.generic import (
     ListView,
@@ -8,6 +13,25 @@ from django.views.generic import (
     DeleteView,
 )
 from .models import Category, Task
+
+
+class CustomLoginView(LoginView):
+    form_class = CustomLoginForm
+    template_name = 'registration/login.html'
+    success_url = reverse_lazy('index')
+
+class CustomLogoutView(LogoutView):
+    next_page = reverse_lazy('index')  
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')  # Assume 'login' is the name of your login URL pattern
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/register.html', {'form': form})
 
 
 class ListListView(ListView):

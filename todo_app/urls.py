@@ -1,9 +1,10 @@
 # todo_list/todo_app/urls.py
 from django.urls import path
 from todo_app import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path("", views.ListListView.as_view(), name="index"),
+    path("index", views.ListListView.as_view(), name="index"),
     path("list/<int:list_id>/", views.ItemListView.as_view(), name="list"),
     # CRUD patterns for ToDoLists
     path("list/add/", views.ListCreate.as_view(), name="list-add"),
@@ -26,4 +27,7 @@ urlpatterns = [
         views.ItemDelete.as_view(),
         name="item-delete",
     ),
+    path('login/', views.CustomLoginView.as_view(), name='login'),
+    path('logout/', views.CustomLogoutView.as_view(), name='logout'), 
+    path('register/', views.register, name='register')
 ]
