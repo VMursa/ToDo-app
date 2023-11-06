@@ -126,3 +126,10 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOGIN_REDIRECT_URL = 'index'
+
+# settings.py
+CSRF_COOKIE_SECURE = False  # Set to True if your site is served over HTTPS
+SESSION_COOKIE_SECURE = False  # Set to True if your site is served over HTTPS
+
